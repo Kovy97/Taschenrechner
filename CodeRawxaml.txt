@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title = "Calculator" Height = "450" Width = "350" >
+        Title="Calculator" Height="450" Width="350">
 
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="DarkGray"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize"   Value="30"/>
+            <Setter Property="FontSize" Value="30"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -24,40 +24,37 @@
             </Setter>
         </Style>
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/Background.png"/>
+    </Window.Background>
 
     <Grid Margin="15">
         <Grid.RowDefinitions>
             <!-- Output -->
             <RowDefinition Height="100"/>
             <!-- Nummer Reihen -->
-            <RowDefinition Height="1.3*"/> 
-            <RowDefinition Height="1.3*"/> 
             <RowDefinition Height="1.3*"/>
             <RowDefinition Height="1.3*"/>
-
+            <RowDefinition Height="1.3*"/>
+            <RowDefinition Height="1.3*"/>
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.3*"/>
             <ColumnDefinition Width="1.3*"/>
             <ColumnDefinition Width="1.3*"/>
             <ColumnDefinition Width="*"/>
-
         </Grid.ColumnDefinitions>
-        <TextBlock Margin="5"
-                x:Name="OutputTextBlock"
-                Grid.Row="0" 
-                Grid.Column="0" 
-                VerticalAlignment="Bottom"
-                Grid.ColumnSpan="4"
-                FontSize="50"
-                TextAlignment="Right">
-            <TextBlock.Effect>
-                <DropShadowEffect Color="Black" 
-                                  Direction="0"
-                                  ShadowDepth="2"
-                                  Opacity="0.5"
-                                  BlurRadius="2"/>
-            </TextBlock.Effect>
+
+        <TextBlock x:Name="OutputTextBlock"
+                   Grid.Row="0" 
+                   Grid.Column="0" 
+                   Grid.ColumnSpan="4"
+                   FontSize="50"
+                   TextAlignment="Right">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </TextBlock.Background>
         </TextBlock>
 
 
@@ -67,7 +64,11 @@
                 Grid.Column="0"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="EightBtn" 
                 Content="8" 
@@ -75,7 +76,11 @@
                 Grid.Column="1"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="NineBtn" 
                 Content="9" 
@@ -83,7 +88,11 @@
                 Grid.Column="2"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="FourBtn" 
                 Content="4" 
@@ -91,7 +100,11 @@
                 Grid.Column="0"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="FiveBtn" 
                 Content="5" 
@@ -99,15 +112,23 @@
                 Grid.Column="1"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
-        
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
+
         <Button x:Name="SixBtn" 
                 Content="6" 
                 Grid.Row="2" 
                 Grid.Column="2"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="OneBtn" 
                 Content="1" 
@@ -115,15 +136,23 @@
                 Grid.Column="0"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
-        
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
+
         <Button x:Name="TwoBtn" 
                 Content="2" 
                 Grid.Row="3" 
                 Grid.Column="1"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="ThreeBtn" 
                 Content="3" 
@@ -131,7 +160,11 @@
                 Grid.Column="2"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="ZeroBtn" 
                 Content="0" 
@@ -139,7 +172,11 @@
                 Grid.Column="1"
                 FontSize="25"
                 FontWeight="Bold" Click="NumBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="EqualBtn"
                 Content="="
@@ -147,7 +184,11 @@
                 Grid.Column="2"
                 FontSize="25"
                 FontWeight="Bold" Click="EqualBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="PlusBtn"
                 Content="+"
@@ -155,7 +196,11 @@
                 Grid.Column="4"
                 FontSize="40"
                 FontWeight="Bold" Click="PlusBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="MinusBtn"
                 Content="-"
@@ -163,7 +208,11 @@
                 Grid.Column="4"
                 FontSize="40"
                 FontWeight="Bold" Click="MinusBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="MultiBtn"
                 Content="x"
@@ -171,7 +220,11 @@
                 Grid.Column="4"
                 FontSize="30"
                 FontWeight="Bold" Click="MultiBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="DivBtn"
                 Content="/"
@@ -179,7 +232,11 @@
                 Grid.Column="4"
                 FontSize="25"
                 FontWeight="Bold" Click="DivBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="ClearBtn"
                 Content="C"
@@ -187,7 +244,11 @@
                 Grid.Column="0"
                 FontSize="25"
                 FontWeight="Bold" Click="ClearBtn_Click"
-                BorderThickness="2" BorderBrush="Black"/>
+                BorderThickness="2" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/Background.png"/>
+            </Button.Background>
+        </Button>
 
 
 
